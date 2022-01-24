@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Side Menu</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?famnily=Poppins:200,300,400,500,600,700,800,900&display=swap');
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f4f4f4;
+    }
+    .navbar {
+      background: #3b5998;
+      overflow: hidden;
+      height: 63px;
+      display: flex;
+    }
+    .navbar a:hover {
+      background: #ddd;
+      color: #000;
+    }
+    .open-slide a {
+      display: block;
+      padding: 16px;
+    }
+    .navbar-nav {
+      display: flex;
+      padding-top: 8px;
+    }
+    .navbar-nav li a {
+      text-decoration: none;
+      display: block;
+      color: #f2f2f2;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
+    .side-nav {
+      height: 100%;
+      background: #111;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      opacity: 0.9;
+      padding-top: 60px;
+      transition: 1s;
+    }
+    .side-nav a {
+      padding: 10px 10px 10px 30px;
+      text-decoration: none;
+      font-size: 22px;
+      color: #ccc;
+      display: block;
+      transition: .3s;
+    }
+    .side-nav a:hover {
+      color: #fff;
+    }
+    .side-nav .btn-close {
+      position: absolute;
+      top: 0;
+      right:22px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    #main {
+      transition: margin-left .5s;
+      padding: 20px;
+      width: 100%;
+      overflow: hidden;
+    }
+    @media(max-width: 568px) {
+      .navbar-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#fff" stroke-width="3" />
+          <path d="M0,14 30,14" stroke="#fff" stroke-width="3" />
+          <path d="M0,23 30,23" stroke="#fff" stroke-width="3" />
+        </svg>
+      </a>
+    </span>
+
+    <ul class="navbar-nav">
+      <li><a href="https://www.naver.com">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul> 
+  </nav>
+
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="https://www.naver.com">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="main">
+    <h1>Responsive Side Menu</h1>
+  </div>
+
+  <script>
+    function openSlideMenu() {
+      document.querySelector('#side-menu').style.width = '250px';
+      document.querySelector('#main').style.marginLeft = '250px';
+    }
+    function closeSlideMenu() {
+      document.querySelector('#side-menu').style.width = '0';
+      document.querySelector('#main').style.marginLeft = '0';
+    }
+  </script>
+</body>
+</html>
