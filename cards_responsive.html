@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?famnily=Poppins:200,300,400,500,600,700,800,900&display=swap');
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background: rgb(21, 111, 214);
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .pic {
+      width: 250px;
+      height: 350px;
+      position: relative;
+      object-fit: cover;
+      object-position: 50% 0%;
+    }
+    .card {
+      height: 650px;
+      width: 250px;
+      margin: 20px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 5px 10px 20px #040f74;
+      transition: .4s;
+    }
+    .card:hover {
+      transform: scale(.9);
+    }
+    .info {
+      padding: 20px 0;
+      background: rgb(255, 255, 255);
+      height: 207px;
+      border-radius: 0 0 10px 10px;
+    }
+    .text-1 {
+      text-align: center;
+      font-size: 21px;
+      color: #040f74;
+    }
+    .text-2 {
+      margin: 10px 20px;
+      padding: 10px 0;
+    }
+    .btn {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .btn-1 {
+      height: 40px;
+      width: 120px;
+      font-size: 17px;
+      transition: .4s all;
+      background: none;
+      outline: none;
+    }
+    @media(max-width: 1000px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="image">
+        <img src="torronto.jpg" alt="" class="pic">
+      </div>
+      <div class="info">
+        <div class="content">
+          <p class="text-1">Torronto City</p>
+          <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ipsam rerum et ipsum velit quia eaque exercitationem minus, quae molestiae id corrupti labore nemo illo nulla nihil fugit quidem placeat!</p>
+        </div>
+        <div class="btn">
+          <button class="btn-1">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="london.jpg" alt="" class="pic">
+      </div>
+      <div class="info">
+        <div class="content">
+          <p class="text-1">London City</p>
+          <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ipsam rerum et ipsum velit quia eaque exercitationem minus, quae molestiae id corrupti labore nemo illo nulla nihil fugit quidem placeat!</p>
+        </div>
+        <div class="btn">
+          <button class="btn-1">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="seoul.jpg" alt="" class="pic">
+      </div>
+      <div class="info">
+        <div class="content">
+          <p class="text-1">Seoul City</p>
+          <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ipsam rerum et ipsum velit quia eaque exercitationem minus, quae molestiae id corrupti labore nemo illo nulla nihil fugit quidem placeat!</p>
+        </div>
+        <div class="btn">
+          <button class="btn-1">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
