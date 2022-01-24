@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?famnily=Poppins:200,300,400,500,600,700,800,900&display=swap');
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    #sidebar {
+      position: fixed;
+      width: 30%;
+      height: 100%;
+      left: -30%;
+      background: black;
+    }
+    #sidebar.active {
+      left: 0%;
+    }
+    #sidebar li {
+      color: #fff;
+      font-size: 30px;
+      padding: 30px;
+      border-bottom: 1px solid gray;
+      text-align: center;
+    }
+    #sidebar li:hover {
+      background: #4d3f57;
+      color: yellow;
+      transition: .4s;
+    }
+    .toggle-btn {
+      position: absolute;
+      left: 105%;
+      top: 15px;
+      cursor: pointer;
+    }
+    .toggle-btn span {
+      display: block;
+      width: 30px;
+      height: 5px;
+      margin: 3px;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Gallery</li>
+      <li>Contact Us</li>
+    </ul>
+  </div>
+  <script>
+    const toggle = document.querySelector('#sidebar > .toggle-btn');
+    toggle.addEventListener('click', () => {
+      const sidebar = document.querySelector('#sidebar');
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
